@@ -2,23 +2,7 @@ var Player = function(name){
   var hpyDnc = "I got Gangnum style";
   this.name = name;
   this.points = {
-  "Game 1": 0,
-  "Game 2": 0,
-  "Game 3": 0,
-  "Game 4": 0,
-  "Game 5": 0,
 };
-};
-
-Player.prototype.avrgP = function(){
-  var result = 0;
-  var lgn = 0;
-  var pnts = this.points;
-  for(var x in pnts) {
-    result += pnts[x];
-    lgn += 1/2;
-  }
-  return result/lgn;
 };
 
 var display = function(){
@@ -43,42 +27,41 @@ drkNgt.name = 'Dark Nite';
 brnEtr.name = "Brain Eater";
 rngWrm.name = "Ring Worm";
 
+bdog.points.game1 = {points: 50, rebound: 4, ast:5};
+bdog.points.game2 = {points: 40, rebound: 4, ast:5};
+bdog.points.game3 = {points: 35, rebound: 4, ast:5};
+bdog.points.game4 = {points: 44, rebound: 4, ast:5};
+bdog.points.game5 = {points: 14, rebound: 4, ast:5};
 
-bdog.points.game1 = 50;
-bdog.points.game2 = 38;
-bdog.points.game3 = 44;
-bdog.points.game4 = 39;
-bdog.points.game5 = 60;
+rditty.points.game1 = {points: 4, rebound: 1, ast:0};
+rditty.points.game2 = {points: 18, rebound: 4, ast:2};
+rditty.points.game3 = {points: 29, rebound: 8, ast:5};
+rditty.points.game4 = {points: 22, rebound: 6, ast:7};
+rditty.points.game5 = {points: 30, rebound: 4, ast:1};
 
-rditty.points.game1 = 2;
-rditty.points.game2 = 49;
-rditty.points.game3 = 8;
-rditty.points.game4 = 5;
-rditty.points.game5 = 19;
+pb.points.game1 = {points: 20, rebound: 4, ast:9};
+pb.points.game2 = {points: 10, rebound: 3, ast:8};
+pb.points.game3 = {points: 40, rebound: 4, ast:4};
+pb.points.game4 = {points: 30, rebound: 7, ast:3};
+pb.points.game5 = {points: 20, rebound: 4, ast:1};
 
-pb.points.game1 = 16;
-pb.points.game2 = 22;
-pb.points.game3 = 14;
-pb.points.game4 = 38;
-pb.points.game5 = 32;
+drkNgt.points.game1 = {points: 20, rebound: 4, ast:3};
+drkNgt.points.game2 = {points: 10, rebound: 1, ast:1};
+drkNgt.points.game3 = {points: 4, rebound: 2, ast:5};
+drkNgt.points.game4 = {points: 9, rebound: 0, ast:5};
+drkNgt.points.game5 = {points: 20, rebound: 4, ast:2};
 
-drkNgt.points.game1 = 12;
-drkNgt.points.game2 = 21;
-drkNgt.points.game3 = 14;
-drkNgt.points.game4 = 8;
-drkNgt.points.game5 = 5;
+brnEtr.points.game1 = {points: 7, rebound: 4, ast:1};
+brnEtr.points.game2 = {points: 10, rebound: 4, ast:1};
+brnEtr.points.game3 = {points: 20, rebound: 4, ast:3};
+brnEtr.points.game4 = {points: 10, rebound: 4, ast:4};
+brnEtr.points.game5 = {points: 5, rebound: 4, ast:2};
 
-brnEtr.points.game1 = 2;
-brnEtr.points.game2 = 10;
-brnEtr.points.game3 = 18;
-brnEtr.points.game4 = 6;
-brnEtr.points.game5 = 15;
-
-rngWrm.points.game1 = 24;
-rngWrm.points.game2 = 38;
-rngWrm.points.game3 = 16;
-rngWrm.points.game4 = 41;
-rngWrm.points.game5 = 36;
+rngWrm.points.game1 = {points: 12, rebound: 4, ast:5};
+rngWrm.points.game2 = {points: 5, rebound: 4, ast:5};
+rngWrm.points.game3 = {points: 30, rebound: 4, ast:5};
+rngWrm.points.game4 = {points: 20, rebound: 4, ast:5};
+rngWrm.points.game5 = {points: 10, rebound: 4, ast:5};
 
 var plist = display(bdog, rditty, pb, drkNgt, brnEtr, rngWrm);
 

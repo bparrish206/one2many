@@ -7,7 +7,7 @@ var Team = function (player1, player2, player3) {
 };
 
 Team.prototype.avrgP = function(){
-  var teamTot = this.player1.avrgP() + this.player2.avrgP() + this.player3.avrgP();
+  var teamTot = this.player1.points.game1.points + this.player2.points.game1.points + this.player3.points.game1.points;
   return teamTot;
 };
 
